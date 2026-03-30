@@ -3,8 +3,8 @@
 //  Déployer comme Web App (Execute as: Me, Who has access: Anyone)
 // ============================================================
 
-const SHEET_ID = 'REMPLACE_PAR_TON_SHEET_ID'; // ← colle l'ID de ton Google Sheet ici
-const ADMIN_PASSWORD = 'monlan2024';            // ← change ce mot de passe
+const SHEET_ID = 'https://docs.google.com/spreadsheets/d/1_Ndk7zCkfxk896KBVOfLPGJBh_9iH_mH_cPTPLGitR8/edit?gid=0#gid=0'; // ← colle l'ID de ton Google Sheet ici
+const ADMIN_PASSWORD = 'mecalux';            // ← change ce mot de passe
 
 // Noms des onglets
 const TABS = {
