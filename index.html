@@ -12,7 +12,7 @@
   --border:#303030;--border2:#3a3a3a;
   --accent:#2563eb;--accentfade:rgba(37,99,235,.15);
   --muted:#555;--muted2:#999;
-  --cs2:#e8734a;--lol:#c89b3c;--fort:#5abfe8;--sc2:#e84a4a;--brawl:#8e5ce7;
+  --cs2:#e8734a;--lol:#c89b3c;--fort:#5abfe8;--sc2r:#e84a4a;--brawl:#8e5ce7;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--bg);font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.5;color:#fff;}
@@ -29,6 +29,7 @@ nav button.active{background:var(--accent) !important;color:#fff !important;}
 main{padding:24px;max-width:960px;margin:0 auto;}
 .page{display:none;}.page.active{display:block;}
 
+/* HERO */
 .hero{padding:8px 0 28px;}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--s2);border:1px solid var(--border2);border-radius:20px;padding:5px 14px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.07em;color:var(--muted2);margin-bottom:18px;}
 .hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);}
@@ -36,15 +37,16 @@ h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,10vw,96px);line-heig
 h1 em{color:var(--accent);font-style:normal;display:block;}
 .hero-sub{color:var(--muted2);font-size:13px;margin-top:12px;}
 
+/* STATS */
 .stats-row{display:flex;gap:8px;margin-bottom:20px;}
 .stat-pill{background:var(--s1);border:1px solid var(--border);border-radius:10px;padding:14px 18px;flex:1;text-align:center;}
 .sp-val{font-family:'Bebas Neue',sans-serif;font-size:28px;line-height:1;color:var(--accent);}
 .sp-lbl{font-size:10px;color:var(--muted2);margin-top:3px;font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.05em;}
 
+/* NIGHTS */
 .selector-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
 .nights-row{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap;}
-.night-btn{background:var(--s2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;cursor:pointer;transition:all .15s;min-width:80px;text-align:left;}
-.night-btn:hover{border-color:var(--border2);}
+.night-btn{background:var(--s2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;min-width:80px;text-align:left;}
 .night-btn.active{background:var(--accentfade);border-color:var(--accent);}
 .night-btn-num{font-family:'Bebas Neue',sans-serif;font-size:30px;line-height:1;color:#fff;}
 .night-btn-lbl{font-size:10px;color:var(--muted2);margin-top:2px;}
@@ -53,8 +55,10 @@ h1 em{color:var(--accent);font-style:normal;display:block;}
 .b-open{background:var(--s3);color:var(--muted2);border:1px solid var(--border2);}
 .b-done{background:var(--s1);color:var(--muted);border:1px solid var(--border);}
 
+/* CARD */
 .card{background:var(--s1);border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-bottom:14px;}
 
+/* LEADERBOARD */
 .lb-row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);}
 .lb-row:last-child{border-bottom:none;}
 .lb-rank{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);width:22px;text-align:right;flex-shrink:0;}
@@ -66,13 +70,14 @@ h1 em{color:var(--accent);font-style:normal;display:block;}
 .gp-cs2{background:rgba(232,115,74,.12);color:var(--cs2);}
 .gp-lol{background:rgba(200,155,60,.12);color:var(--lol);}
 .gp-fortnite{background:rgba(90,191,232,.12);color:var(--fort);}
-.gp-sc2{background:rgba(232,74,74,.12);color:var(--sc2);}
+.gp-sc2{background:rgba(232,74,74,.12);color:var(--sc2r);}
 .gp-brawlhalla{background:rgba(142,92,231,.12);color:var(--brawl);}
 .lb-pts{font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--accent);min-width:36px;text-align:right;}
 
+/* MATCHS */
 .filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;}
 .fb{background:var(--s2) !important;border:1px solid var(--border) !important;color:#fff !important;font-family:'DM Mono',monospace !important;font-size:10px !important;padding:5px 12px !important;border-radius:6px !important;cursor:pointer !important;transition:all .12s !important;text-transform:uppercase !important;}
-.fb:hover,.fb.active{border-color:var(--accent) !important;background:var(--accent) !important;color:#fff !important;}
+.fb:hover,.fb.active{border-color:var(--accent) !important;background:var(--accent) !important;}
 .match-row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);}
 .match-row:last-child{border-bottom:none;}
 .match-tag{font-family:'DM Mono',monospace;font-size:9px;padding:3px 8px;border-radius:20px;flex-shrink:0;width:70px;text-align:center;}
@@ -81,45 +86,41 @@ h1 em{color:var(--accent);font-style:normal;display:block;}
 .match-st{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);text-align:right;min-width:62px;}
 .match-st.done{color:var(--accent);}
 
-.reg-split{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.big-input{width:100%;background:var(--s2);border:1px solid var(--border);color:#fff;padding:11px 14px;border-radius:9px;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;transition:border-color .15s;margin-bottom:12px;}
-.big-input:focus{border-color:var(--accent);}
-.big-input::placeholder{color:#555;}
-select.big-input{cursor:pointer;}
-select.big-input option{background:var(--s2);color:#fff;}
-.field-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted2);margin-bottom:6px;margin-top:4px;}
-.game-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:14px;}
-.gc{display:flex;align-items:center;gap:8px;background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:10px 12px;cursor:pointer;transition:all .12s;font-size:12px;color:#fff;}
-.gc:hover{border-color:var(--border2);}
-.gc.sel{border-color:var(--accent);background:var(--accentfade);}
-.gc-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
-.cta{width:100%;background:var(--accent) !important;color:#fff !important;border:none !important;padding:13px !important;border-radius:9px !important;font-family:'DM Mono',monospace !important;font-size:12px !important;font-weight:500 !important;letter-spacing:.07em !important;text-transform:uppercase !important;cursor:pointer !important;transition:opacity .15s !important;margin-top:6px;}
+/* INSCRIPTIONS */
+.reg-wrap{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.reg-form-big{width:100%;background:var(--s2);border:1px solid var(--border);color:#fff;padding:14px 18px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;outline:none;transition:border-color .15s;margin-bottom:12px;}
+.reg-form-big:focus{border-color:var(--accent);}
+.reg-form-big::placeholder{color:#555;}
+.cta{width:100%;background:var(--accent) !important;color:#fff !important;border:none !important;padding:14px !important;border-radius:10px !important;font-family:'DM Mono',monospace !important;font-size:13px !important;font-weight:500 !important;letter-spacing:.07em !important;text-transform:uppercase !important;cursor:pointer !important;transition:opacity .15s !important;}
 .cta:hover{opacity:.85 !important;}
-.reg-num-big{font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1;color:#fff;}
+.reg-num-big{font-family:'Bebas Neue',sans-serif;font-size:56px;line-height:1;color:#fff;}
 .reg-num-big em{color:var(--accent);font-style:normal;}
-.prog-track{height:5px;background:var(--s3);border-radius:3px;overflow:hidden;margin:12px 0 18px;}
+.prog-track{height:5px;background:var(--s3);border-radius:3px;overflow:hidden;margin:12px 0 20px;}
 .prog-fill{height:100%;background:var(--accent);border-radius:3px;transition:width .5s cubic-bezier(.4,0,.2,1);}
 .pitem{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);}
 .pitem:last-child{border-bottom:none;}
-.pav{width:32px;height:32px;border-radius:50%;background:var(--accentfade);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:10px;flex-shrink:0;}
-.pname{font-weight:500;font-size:13px;color:#fff;}
-.pgames{font-size:10px;color:var(--muted2);margin-top:2px;}
-.pnum{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-left:auto;}
+.pav{width:32px;height:32px;border-radius:50%;background:var(--accentfade);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;flex-shrink:0;}
+.pname{font-weight:500;font-size:14px;color:#fff;}
+.pnum{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-left:auto;}
 .toast{display:none;font-size:12px;margin-top:10px;padding:10px 14px;border-radius:9px;}
 .toast.ok{background:rgba(37,99,235,.12);color:var(--accent);border:1px solid rgba(37,99,235,.25);}
-.toast.err{background:rgba(232,74,74,.1);color:var(--sc2);border:1px solid rgba(232,74,74,.2);}
+.toast.err{background:rgba(232,74,74,.1);color:var(--sc2r);border:1px solid rgba(232,74,74,.2);}
 
-.cfg-input{width:100%;background:var(--s2);border:1px solid var(--border);color:#fff;padding:11px 14px;border-radius:9px;font-family:'DM Mono',monospace;font-size:12px;outline:none;transition:border-color .15s;margin-bottom:12px;}
+/* ADMIN */
+.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;}
+.admin-card{background:var(--s1);border:1px solid var(--border);border-radius:12px;padding:20px 22px;}
+.admin-title{font-family:'Bebas Neue',sans-serif;font-size:22px;color:#fff;margin-bottom:4px;}
+.admin-sub{font-size:12px;color:var(--muted2);margin-bottom:16px;line-height:1.6;}
+.btn-danger{width:100%;background:rgba(232,74,74,.12) !important;color:var(--sc2r) !important;border:1px solid rgba(232,74,74,.25) !important;padding:11px !important;border-radius:9px !important;font-family:'DM Mono',monospace !important;font-size:11px !important;font-weight:500 !important;letter-spacing:.07em !important;text-transform:uppercase !important;cursor:pointer !important;transition:all .15s !important;}
+.btn-danger:hover{background:rgba(232,74,74,.2) !important;}
+.btn-ok{width:100%;background:var(--accentfade) !important;color:var(--accent) !important;border:1px solid rgba(37,99,235,.25) !important;padding:11px !important;border-radius:9px !important;font-family:'DM Mono',monospace !important;font-size:11px !important;font-weight:500 !important;letter-spacing:.07em !important;text-transform:uppercase !important;cursor:pointer !important;transition:all .15s !important;}
+.btn-ok:hover{background:var(--accent) !important;color:#fff !important;}
+.admin-msg{font-size:12px;margin-top:10px;padding:9px 14px;border-radius:8px;display:none;}
+.admin-msg.ok{background:rgba(37,99,235,.12);color:var(--accent);border:1px solid rgba(37,99,235,.25);}
+.admin-msg.err{background:rgba(232,74,74,.1);color:var(--sc2r);border:1px solid rgba(232,74,74,.2);}
+.cfg-input{width:100%;background:var(--s2);border:1px solid var(--border);color:#fff;padding:11px 14px;border-radius:9px;font-family:'DM Mono',monospace;font-size:12px;outline:none;transition:border-color .15s;margin-bottom:10px;}
 .cfg-input:focus{border-color:var(--accent);}
 .cfg-input::placeholder{color:#555;}
-.btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;}
-.btn-p{background:var(--accent) !important;color:#fff !important;border:none !important;padding:10px 18px !important;border-radius:8px !important;font-family:'DM Mono',monospace !important;font-size:11px !important;letter-spacing:.05em !important;text-transform:uppercase !important;cursor:pointer !important;transition:opacity .15s !important;}
-.btn-p:hover{opacity:.85 !important;}
-.btn-s{background:none !important;color:#fff !important;border:1px solid var(--border2) !important;padding:10px 18px !important;border-radius:8px !important;font-family:'DM Mono',monospace !important;font-size:11px !important;letter-spacing:.05em !important;text-transform:uppercase !important;cursor:pointer !important;transition:all .15s !important;}
-.btn-s:hover{border-color:#fff !important;}
-.cfg-msg{font-size:12px;margin-top:10px;padding:9px 14px;border-radius:8px;display:none;}
-.cfg-msg.ok{background:rgba(37,99,235,.12);color:var(--accent);border:1px solid rgba(37,99,235,.25);}
-.cfg-msg.err{background:rgba(232,74,74,.1);color:var(--sc2);border:1px solid rgba(232,74,74,.2);}
 .code-blk{background:var(--bg);border:1px solid var(--border);border-radius:9px;padding:16px;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted2);line-height:2;margin-top:12px;white-space:pre-wrap;word-break:break-all;}
 .code-blk strong{color:var(--accent);}
 
@@ -127,11 +128,15 @@ select.big-input option{background:var(--s2);color:#fff;}
 .page-head-sup{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;}
 .page-head-title{font-family:'Bebas Neue',sans-serif;font-size:44px;line-height:1;color:#fff;}
 
+.spinner{display:inline-block;width:12px;height:12px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;margin-right:6px;vertical-align:middle;}
+@keyframes spin{to{transform:rotate(360deg)}}
+
 @media(max-width:680px){
   nav button{padding:7px 8px !important;font-size:9px !important;}
   main{padding:14px;}
   .stats-row{flex-wrap:wrap;}
-  .reg-split{grid-template-columns:1fr;}
+  .reg-wrap{grid-template-columns:1fr;}
+  .admin-grid{grid-template-columns:1fr;}
   h1{font-size:52px;}
 }
 </style>
@@ -145,14 +150,14 @@ select.big-input option{background:var(--s2);color:#fff;}
     <button onclick="go('leaderboard',this)">Classement</button>
     <button onclick="go('matches',this)">Matchs</button>
     <button onclick="go('register',this)">Inscriptions</button>
-    <button onclick="go('config',this)">Config</button>
+    <button onclick="go('admin',this)">Admin</button>
   </nav>
   <div class="live-pill"><span class="live-dot"></span>LIVE</div>
 </div>
 
 <main>
 
-  <!-- ACCUEIL -->
+  <!-- ═══ ACCUEIL ═══ -->
   <div id="page-home" class="page active">
     <div class="hero">
       <div class="hero-tag"><span class="hero-tag-dot"></span>TOURNOI MULTIJEUX · 5 SOIRS</div>
@@ -160,18 +165,18 @@ select.big-input option{background:var(--s2);color:#fff;}
       <div class="hero-sub">Classement temps réel · 16 joueurs · CS2 · LoL · Fortnite · SC2 · Brawlhalla</div>
     </div>
     <div class="stats-row">
-      <div class="stat-pill"><div class="sp-val" id="stat-players">16</div><div class="sp-lbl">Joueurs</div></div>
-      <div class="stat-pill"><div class="sp-val" id="stat-matches">0</div><div class="sp-lbl">Matchs joués</div></div>
+      <div class="stat-pill"><div class="sp-val" id="stat-players">—</div><div class="sp-lbl">Joueurs inscrits</div></div>
+      <div class="stat-pill"><div class="sp-val" id="stat-matches">—</div><div class="sp-lbl">Matchs joués</div></div>
       <div class="stat-pill"><div class="sp-val" id="stat-nights">0/5</div><div class="sp-lbl">Soirs terminés</div></div>
       <div class="stat-pill"><div class="sp-val" id="stat-top">—</div><div class="sp-lbl">Top score</div></div>
     </div>
-    <div class="selector-label">Choisir un soir</div>
+    <div class="selector-label">Les 5 soirs</div>
     <div class="nights-row" id="nights-home"></div>
     <div class="card">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
         <div>
           <div style="font-weight:500;font-size:14px;color:#fff;">Top 5 — Classement</div>
-          <div style="font-size:11px;color:var(--muted2);margin-top:2px;" id="lb-timestamp">Chargement…</div>
+          <div style="font-size:11px;color:var(--muted2);margin-top:2px;" id="lb-ts">Chargement…</div>
         </div>
         <button style="background:none !important;border:none !important;color:var(--accent) !important;font-family:'DM Mono',monospace;font-size:10px;cursor:pointer;letter-spacing:.05em;text-transform:uppercase;" onclick="go('leaderboard',document.querySelectorAll('nav button')[1])">Voir tout →</button>
       </div>
@@ -179,13 +184,13 @@ select.big-input option{background:var(--s2);color:#fff;}
     </div>
   </div>
 
-  <!-- CLASSEMENT -->
+  <!-- ═══ CLASSEMENT ═══ -->
   <div id="page-leaderboard" class="page">
     <div class="page-head"><div class="page-head-sup">Classement général</div><div class="page-head-title">Tous les joueurs</div></div>
     <div class="card" id="lb-full"></div>
   </div>
 
-  <!-- MATCHS -->
+  <!-- ═══ MATCHS ═══ -->
   <div id="page-matches" class="page">
     <div class="page-head"><div class="page-head-sup">Tableau</div><div class="page-head-title">Tous les matchs</div></div>
     <div class="filters">
@@ -201,36 +206,18 @@ select.big-input option{background:var(--s2);color:#fff;}
     <div class="card"><div id="match-list"></div></div>
   </div>
 
-  <!-- INSCRIPTIONS -->
+  <!-- ═══ INSCRIPTIONS ═══ -->
   <div id="page-register" class="page">
-    <div class="page-head"><div class="page-head-sup">Rejoindre</div><div class="page-head-title">S'inscrire</div></div>
-    <div class="reg-split">
+    <div class="page-head"><div class="page-head-sup">Rejoindre le tournoi</div><div class="page-head-title">S'inscrire</div></div>
+    <div class="reg-wrap">
       <div class="card">
-        <div class="field-lbl" style="margin-top:0;">Pseudo</div>
-        <input class="big-input" id="r-pseudo" placeholder="Ton pseudo en jeu" maxlength="24"/>
-        <div class="field-lbl">Discord</div>
-        <input class="big-input" id="r-discord" placeholder="pseudo#0000"/>
-        <div class="field-lbl">Jeux pratiqués</div>
-        <div class="game-grid">
-          <div class="gc" onclick="tg(this,'cs2')"><span class="gc-dot" style="background:var(--cs2)"></span>CS2</div>
-          <div class="gc" onclick="tg(this,'lol')"><span class="gc-dot" style="background:var(--lol)"></span>League of Legends</div>
-          <div class="gc" onclick="tg(this,'fortnite')"><span class="gc-dot" style="background:var(--fort)"></span>Fortnite</div>
-          <div class="gc" onclick="tg(this,'sc2')"><span class="gc-dot" style="background:var(--sc2)"></span>Starcraft II</div>
-          <div class="gc" onclick="tg(this,'brawlhalla')"><span class="gc-dot" style="background:var(--brawl)"></span>Brawlhalla</div>
-        </div>
-        <div class="field-lbl">Niveau</div>
-        <select class="big-input" id="r-level">
-          <option value="">— Sélectionne —</option>
-          <option>Débutant</option>
-          <option>Intermédiaire</option>
-          <option>Confirmé</option>
-          <option>Expert / Compétitif</option>
-        </select>
-        <button class="cta" onclick="submitReg()">Je m'inscris</button>
+        <div style="font-size:13px;color:var(--muted2);margin-bottom:16px;">Entre ton pseudo — tout le monde participe à tous les jeux.</div>
+        <input class="reg-form-big" id="r-pseudo" placeholder="Ton pseudo" maxlength="24" onkeydown="if(event.key==='Enter') submitReg()"/>
+        <button class="cta" onclick="submitReg()" id="reg-btn">Je m'inscris</button>
         <div class="toast" id="reg-toast"></div>
       </div>
       <div class="card">
-        <div class="field-lbl" style="margin-top:0;">Places prises</div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">Places prises</div>
         <div class="reg-num-big"><em id="rn">0</em> <span style="color:var(--muted);font-size:34px;">/ 16</span></div>
         <div class="prog-track"><div class="prog-fill" id="prog" style="width:0%"></div></div>
         <div id="reg-list"></div>
@@ -238,116 +225,123 @@ select.big-input option{background:var(--s2);color:#fff;}
     </div>
   </div>
 
-  <!-- CONFIG -->
-  <div id="page-config" class="page">
-    <div class="page-head"><div class="page-head-sup">Paramètres</div><div class="page-head-title">Configuration</div></div>
-    <div class="card" style="margin-bottom:14px;">
-      <div class="field-lbl" style="margin-top:0;">URL Google Apps Script</div>
-      <input class="cfg-input" id="cfg-url" placeholder="https://script.google.com/macros/s/.../exec"/>
-      <div class="field-lbl">Mot de passe admin</div>
-      <input class="cfg-input" id="cfg-pw" type="password" placeholder="monlan2024"/>
-      <div class="btn-row">
-        <button class="btn-p" onclick="saveConfig()">Sauvegarder</button>
-        <button class="btn-s" onclick="testApi()">Tester</button>
-        <button class="btn-s" onclick="initSheet()">Init Sheet</button>
+  <!-- ═══ ADMIN ═══ -->
+  <div id="page-admin" class="page">
+    <div class="page-head"><div class="page-head-sup">Administration</div><div class="page-head-title">Panneau admin</div></div>
+
+    <div class="admin-grid">
+      <div class="admin-card">
+        <div class="admin-title">Lancer le tournoi</div>
+        <div class="admin-sub">Une fois toutes les inscriptions faites, génère les matchs en fonction des joueurs inscrits. Les scores sont remis à zéro.</div>
+        <button class="btn-ok" onclick="doInitMatches()" id="btn-init">Générer les matchs</button>
+        <div class="admin-msg" id="msg-init"></div>
       </div>
-      <div class="cfg-msg" id="cfg-msg"></div>
+      <div class="admin-card">
+        <div class="admin-title">Reset complet</div>
+        <div class="admin-sub">Supprime tous les joueurs, scores et matchs. Remet le tournoi à zéro pour recommencer les inscriptions.</div>
+        <button class="btn-danger" onclick="doReset()" id="btn-reset">Tout remettre à zéro</button>
+        <div class="admin-msg" id="msg-reset"></div>
+      </div>
     </div>
+
     <div class="card">
-      <div class="field-lbl" style="margin-top:0;">Guide de déploiement</div>
-      <div class="code-blk"><strong>1.</strong> Crée un Google Sheet vide → copie l'ID dans l'URL
-<strong>2.</strong> Extensions → Apps Script → colle le contenu de Code.gs
-<strong>3.</strong> Remplace SHEET_ID ligne 4 et change le mot de passe ligne 5
-<strong>4.</strong> Déployer → Nouveau déploiement → Web App
-         Execute as: <strong>Me</strong> | Who has access: <strong>Anyone</strong>
-<strong>5.</strong> Copie l'URL de déploiement → colle-la ici → Sauvegarder
-<strong>6.</strong> Clique <strong>Init Sheet</strong> (une seule fois !)
-<strong>7.</strong> Upload ce fichier sur GitHub → Settings → Pages → Branch: main</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px;">Configuration API</div>
+      <div style="font-size:12px;color:var(--muted2);margin-bottom:10px;">URL Google Apps Script (hardcodée dans le fichier ligne 3 du script) :</div>
+      <div style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent);background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;word-break:break-all;" id="api-url-display">—</div>
+      <div class="code-blk" style="margin-top:14px;"><strong>Workflow :</strong>
+1. Inscriptions → les joueurs s'inscrivent avec leur pseudo
+2. Admin → "Générer les matchs" quand tout le monde est inscrit
+3. Les matchs sont créés automatiquement selon le nombre de joueurs
+4. Pour recommencer : "Reset complet" → repart de zéro</div>
     </div>
   </div>
 
 </main>
 
 <script>
-const GAMES_META={cs2:{name:'CS2',night:1,color:'cs2',label:'FPS Tactique'},lol:{name:'LoL',night:2,color:'lol',label:'MOBA'},fortnite:{name:'Fortnite',night:3,color:'fortnite',label:'Battle Royale'},sc2:{name:'SC2',night:4,color:'sc2',label:'Stratégie'},brawlhalla:{name:'Brawlhalla',night:5,color:'brawlhalla',label:'Combat Final'}};
-const GNAMES={cs2:'CS2',lol:'LoL',fortnite:'Fortnite',sc2:'SC2',brawlhalla:'Brawlhalla'};
-const GCOL={cs2:'var(--cs2)',lol:'var(--lol)',fortnite:'var(--fort)',sc2:'var(--sc2)',brawlhalla:'var(--brawl)'};
+// ─────────────────────────────────────────
+//  CONFIG — remplace l'URL ici
+// ─────────────────────────────────────────
+const API_URL = 'https://script.google.com/macros/s/AKfycbzk1NV_vXsEt2z11QhEIBXF2hqFMqogdhXkqAZN-3L3APJaAaPEU3nnbojExXg7esN08g/exec';
+const PW      = 'mecalux';
 
-let state={players:[],matches:[],scores:[],games:[]};
-let mf='all',sg=new Set(),regs=[];
+const GAMES_META = {
+  cs2:        { name:'CS2',        night:1, color:'cs2',        label:'FPS Tactique' },
+  lol:        { name:'LoL',        night:2, color:'lol',        label:'MOBA' },
+  fortnite:   { name:'Fortnite',   night:3, color:'fortnite',   label:'Battle Royale' },
+  sc2:        { name:'SC2',        night:4, color:'sc2',        label:'Stratégie' },
+  brawlhalla: { name:'Brawlhalla', night:5, color:'brawlhalla', label:'Combat Final' }
+};
+const GNAMES = { cs2:'CS2', lol:'LoL', fortnite:'Fortnite', sc2:'SC2', brawlhalla:'Brawlhalla' };
 
-function getConfig(){return{url:localStorage.getItem('m_online_url')||'',pw:localStorage.getItem('m_online_pw')||''};}
+let state = { players:[], matches:[] };
+let mf    = 'all';
 
-function saveConfig(){
-  const url=document.getElementById('cfg-url').value.trim();
-  const pw=document.getElementById('cfg-pw').value.trim();
-  if(!url){showCfgMsg('err','URL manquante !');return;}
-  localStorage.setItem('m_online_url',url);
-  if(pw) localStorage.setItem('m_online_pw',pw);
-  showCfgMsg('ok','Sauvegardé ! Chargement des données…');
-  setTimeout(loadData,800);
+// ─────────────────────────────────────────
+//  API
+// ─────────────────────────────────────────
+async function apiGet(action) {
+  const res  = await fetch(API_URL + '?action=' + action);
+  const data = await res.json();
+  if (data.error) throw new Error(data.error);
+  return data;
 }
 
-async function testApi(){
-  const{url}=getConfig();
-  if(!url){showCfgMsg('err',"Renseigne l'URL d'abord");return;}
-  showCfgMsg('ok','Test en cours…');
-  try{const res=await fetch(url+'?action=getPlayers');const data=await res.json();if(data.error)throw new Error(data.error);showCfgMsg('ok',`Connexion OK — ${data.length} joueurs trouvés`);}
-  catch(e){showCfgMsg('err','Échec : '+e.message);}
+async function apiPost(body) {
+  const res  = await fetch(API_URL, { method:'POST', body: JSON.stringify({ ...body, password: PW }) });
+  const data = await res.json();
+  if (data.error) throw new Error(data.error);
+  return data;
 }
 
-async function initSheet(){
-  const{url,pw}=getConfig();
-  if(!url||!pw){showCfgMsg('err','URL et mot de passe requis');return;}
-  showCfgMsg('ok','Initialisation en cours…');
-  try{const res=await fetch(url,{method:'POST',body:JSON.stringify({action:'initSheet',password:pw})});const data=await res.json();if(data.error)throw new Error(data.error);showCfgMsg('ok',data.message||'Sheet initialisé !');setTimeout(loadData,1000);}
-  catch(e){showCfgMsg('err','Erreur : '+e.message);}
-}
-
-function showCfgMsg(type,msg){const el=document.getElementById('cfg-msg');el.className='cfg-msg '+type;el.style.display='block';el.textContent=msg;}
-
-async function loadData(){
-  const{url}=getConfig();
-  if(!url){renderAll();return;}
-  try{
-    const res=await fetch(url+'?action=getAll');
-    const data=await res.json();
-    if(data.error)throw new Error(data.error);
-    state=data;
-    regs=(state.players||[]).map(p=>({pseudo:p.name,games:[],level:''}));
+// ─────────────────────────────────────────
+//  LOAD
+// ─────────────────────────────────────────
+async function loadData() {
+  try {
+    state = await apiGet('getAll');
     renderAll();
-    document.getElementById('lb-timestamp').textContent='Mis à jour à '+new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
-  }catch(e){
-    document.getElementById('lb-home').innerHTML=`<div style="color:var(--sc2);font-size:13px;padding:16px 0;">Erreur : ${e.message} — configure l'API dans Config</div>`;
-    document.getElementById('lb-timestamp').textContent='Non connecté';
+    document.getElementById('lb-ts').textContent = 'Mis à jour à ' + new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+  } catch(e) {
+    document.getElementById('lb-ts').textContent = 'Erreur de connexion';
+    document.getElementById('lb-home').innerHTML = '<div style="color:var(--sc2r);font-size:13px;padding:16px 0;">'+e.message+'</div>';
   }
 }
 
-function renderAll(){renderHome();renderLbFull();renderMatches();renderRegs();renderStats();}
-
-function renderStats(){
-  const pl=state.players||[];const ma=state.matches||[];
-  const done=ma.filter(m=>m.status==='terminé').length;
-  const nights=new Set(ma.filter(m=>m.status==='terminé').map(m=>m.gameId)).size;
-  const top=pl.length?Math.max(...pl.map(p=>p.total||0)):0;
-  document.getElementById('stat-players').textContent=pl.length||16;
-  document.getElementById('stat-matches').textContent=done;
-  document.getElementById('stat-nights').textContent=nights+'/5';
-  document.getElementById('stat-top').textContent=top||'—';
+function renderAll() {
+  renderStats();
+  renderHome();
+  renderLbFull();
+  renderMatches();
+  renderRegs();
 }
 
-function lbRows(arr,max){
-  if(!arr||arr.length===0)return'<div style="color:var(--muted2);font-size:13px;padding:16px 0;">Aucune donnée — initialise le Sheet dans Config</div>';
-  return arr.map((p,i)=>{
-    const rk=i===0?'r1':i===1?'r2':i===2?'r3':'';
-    const games=['cs2','lol','fortnite','sc2','brawlhalla'].filter(g=>(p[g]||0)>0);
-    return`<div class="lb-row">
+// ─────────────────────────────────────────
+//  STATS
+// ─────────────────────────────────────────
+function renderStats() {
+  const pl  = state.players || [];
+  const ma  = state.matches || [];
+  const done  = ma.filter(m => m.status === 'terminé').length;
+  const nights = new Set(ma.filter(m => m.status === 'terminé').map(m => m.gameId)).size;
+  const top   = pl.length ? Math.max(...pl.map(p => p.total||0)) : 0;
+  document.getElementById('stat-players').textContent = pl.length || '0';
+  document.getElementById('stat-matches').textContent = done;
+  document.getElementById('stat-nights').textContent  = nights + '/5';
+  document.getElementById('stat-top').textContent     = top || '—';
+}
+
+// ─────────────────────────────────────────
+//  LEADERBOARD
+// ─────────────────────────────────────────
+function lbRows(arr, max) {
+  if (!arr || !arr.length) return '<div style="color:var(--muted2);font-size:13px;padding:16px 0;">Aucun joueur inscrit pour le moment.</div>';
+  return arr.map((p,i) => {
+    const rk = i===0?'r1':i===1?'r2':i===2?'r3':'';
+    return `<div class="lb-row">
       <span class="lb-rank ${rk}">${i+1}</span>
       <div style="flex:1;">
-        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-          <span class="lb-name">${p.name}</span>
-          <div style="display:flex;gap:3px;">${games.map(g=>`<span class="gp gp-${g}">${GNAMES[g]}</span>`).join('')}</div>
-        </div>
+        <span class="lb-name">${p.name}</span>
         <div class="lb-bar-wrap"><div class="lb-bar" style="width:${Math.round((p.total||0)/(max||1)*100)}%"></div></div>
       </div>
       <div class="lb-pts">${p.total||0}</div>
@@ -355,15 +349,16 @@ function lbRows(arr,max){
   }).join('');
 }
 
-function renderHome(){
-  const s=[...(state.players||[])].sort((a,b)=>(b.total||0)-(a.total||0));
-  const max=s[0]?.total||1;
-  document.getElementById('lb-home').innerHTML=lbRows(s.slice(0,5),max);
-  const doneG=new Set((state.matches||[]).filter(m=>m.status==='terminé').map(m=>m.gameId));
-  document.getElementById('nights-home').innerHTML=Object.entries(GAMES_META).map(([id,g])=>{
-    const isDone=doneG.has(id);
-    const isCur=!isDone&&[...doneG].filter(gid=>GAMES_META[gid]?.night<g.night).length===g.night-1;
-    return`<div class="night-btn ${isCur?'active':''}">
+function renderHome() {
+  const s   = [...(state.players||[])].sort((a,b)=>(b.total||0)-(a.total||0));
+  const max = s[0]?.total || 1;
+  document.getElementById('lb-home').innerHTML = lbRows(s.slice(0,5), max);
+
+  const doneG = new Set((state.matches||[]).filter(m=>m.status==='terminé').map(m=>m.gameId));
+  document.getElementById('nights-home').innerHTML = Object.entries(GAMES_META).map(([id,g]) => {
+    const isDone = doneG.has(id);
+    const isCur  = !isDone && [...doneG].filter(gid => GAMES_META[gid]?.night < g.night).length === g.night-1;
+    return `<div class="night-btn ${isCur?'active':''}">
       <div class="night-btn-num">${g.night}</div>
       <div class="night-btn-lbl">${g.name}</div>
       <span class="night-btn-badge ${isDone?'b-done':isCur?'b-cur':'b-open'}">${isDone?'Terminé':isCur?'Ce soir':'Ouvert'}</span>
@@ -371,22 +366,33 @@ function renderHome(){
   }).join('');
 }
 
-function renderLbFull(){const s=[...(state.players||[])].sort((a,b)=>(b.total||0)-(a.total||0));document.getElementById('lb-full').innerHTML=lbRows(s,s[0]?.total||1);}
+function renderLbFull() {
+  const s   = [...(state.players||[])].sort((a,b)=>(b.total||0)-(a.total||0));
+  const max = s[0]?.total || 1;
+  document.getElementById('lb-full').innerHTML = lbRows(s, max);
+}
 
-function renderMatches(){
-  let list=[...(state.matches||[])];
-  if(mf!=='all'&&mf!=='done'&&mf!=='pending') list=list.filter(m=>m.gameId===mf);
-  else if(mf==='done') list=list.filter(m=>m.status==='terminé');
-  else if(mf==='pending') list=list.filter(m=>m.status!=='terminé');
-  if(list.length===0){document.getElementById('match-list').innerHTML='<div style="color:var(--muted2);font-size:13px;padding:12px 0;">Aucun match trouvé</div>';return;}
-  document.getElementById('match-list').innerHTML=list.slice(0,100).map(m=>{
-    const g=GAMES_META[m.gameId]||{name:m.gameId,color:'cs2'};
-    const done=m.status==='terminé';
-    const t1=m.team1||'—',t2=m.team2||'—';
-    const isT=t1.includes(',');
-    const t1s=isT?t1.split(',').slice(0,3).join(', ')+(t1.split(',').length>3?'…':''):t1;
-    const t2s=isT?t2.split(',').slice(0,3).join(', ')+(t2.split(',').length>3?'…':''):t2;
-    return`<div class="match-row">
+// ─────────────────────────────────────────
+//  MATCHS
+// ─────────────────────────────────────────
+function renderMatches() {
+  let list = [...(state.matches||[])];
+  if (mf !== 'all' && mf !== 'done' && mf !== 'pending') list = list.filter(m => m.gameId === mf);
+  else if (mf === 'done')    list = list.filter(m => m.status === 'terminé');
+  else if (mf === 'pending') list = list.filter(m => m.status !== 'terminé');
+
+  if (!list.length) {
+    document.getElementById('match-list').innerHTML = '<div style="color:var(--muted2);font-size:13px;padding:12px 0;">Aucun match — lance les inscriptions puis génère les matchs depuis Admin.</div>';
+    return;
+  }
+  document.getElementById('match-list').innerHTML = list.slice(0,100).map(m => {
+    const g    = GAMES_META[m.gameId] || { name:m.gameId, color:'cs2' };
+    const done = m.status === 'terminé';
+    const t1   = m.team1||'—', t2 = m.team2||'—';
+    const isT  = t1.includes(',');
+    const t1s  = isT ? t1.split(',').slice(0,3).join(', ')+(t1.split(',').length>3?'…':'') : t1;
+    const t2s  = isT ? t2.split(',').slice(0,3).join(', ')+(t2.split(',').length>3?'…':'') : t2;
+    return `<div class="match-row">
       <span class="match-tag gp-${g.color}">${g.name}</span>
       <div class="match-players">
         <span style="${done&&m.winner===m.team1?'color:var(--accent);font-weight:500':''}">${t1s}</span>
@@ -395,62 +401,125 @@ function renderMatches(){
       </div>
       <div class="match-st ${done?'done':''}">${done?'✓ terminé':'à jouer'}</div>
     </div>`;
-  }).join('')+(list.length>100?`<div style="color:var(--muted2);font-size:12px;padding:10px 0;">+ ${list.length-100} matchs…</div>`:'');
+  }).join('');
 }
 
-function filt(f,btn){mf=f;document.querySelectorAll('.fb').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderMatches();}
+function filt(f, btn) {
+  mf = f;
+  document.querySelectorAll('.fb').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderMatches();
+}
 
-function renderRegs(){
-  const n=regs.length;
-  document.getElementById('rn').textContent=n;
-  document.getElementById('prog').style.width=Math.round(n/16*100)+'%';
-  document.getElementById('reg-list').innerHTML=regs.map((r,i)=>`
+// ─────────────────────────────────────────
+//  INSCRIPTIONS
+// ─────────────────────────────────────────
+function renderRegs() {
+  const players = state.players || [];
+  const n = players.length;
+  document.getElementById('rn').textContent   = n;
+  document.getElementById('prog').style.width = Math.round(n/16*100) + '%';
+  document.getElementById('reg-list').innerHTML = players.map((p,i) => `
     <div class="pitem">
-      <div class="pav">${r.pseudo.slice(0,2).toUpperCase()}</div>
-      <div>
-        <div class="pname">${r.pseudo}</div>
-        <div class="pgames">${(r.games||[]).map(g=>`<span style="color:${GCOL[g]||'#fff'};margin-right:5px;">${GNAMES[g]||g}</span>`).join('')}</div>
-      </div>
+      <div class="pav">${p.name.slice(0,2).toUpperCase()}</div>
+      <div class="pname">${p.name}</div>
       <div class="pnum">#${String(i+1).padStart(2,'0')}</div>
     </div>`).join('');
 }
 
-function tg(el,game){el.classList.toggle('sel');el.classList.contains('sel')?sg.add(game):sg.delete(game);}
+async function submitReg() {
+  const pseudo = document.getElementById('r-pseudo').value.trim();
+  if (!pseudo) { showToast('err', 'Entre ton pseudo !'); return; }
 
-async function submitReg(){
-  const pseudo=document.getElementById('r-pseudo').value.trim();
-  const discord=document.getElementById('r-discord').value.trim();
-  const level=document.getElementById('r-level').value;
-  if(!pseudo){showToast('err','Entre ton pseudo !');return;}
-  if(regs.find(r=>r.pseudo.toLowerCase()===pseudo.toLowerCase())){showToast('err','Pseudo déjà inscrit !');return;}
-  if(regs.length>=16){showToast('err','Tournoi complet (16/16) !');return;}
-  regs.push({pseudo,discord:discord||'—',games:[...sg],level:level||'Intermédiaire'});
-  renderRegs();
-  const{url,pw}=getConfig();
-  if(url&&pw){try{await fetch(url,{method:'POST',body:JSON.stringify({action:'addScore',password:pw,gameId:'registration',player:pseudo,points:0,detail:`Discord:${discord||'—'} Niveau:${level}`})});}catch(_){}}
-  document.getElementById('r-pseudo').value='';
-  document.getElementById('r-discord').value='';
-  document.getElementById('r-level').value='';
-  sg=new Set();
-  document.querySelectorAll('.gc').forEach(el=>el.classList.remove('sel'));
-  showToast('ok',`${pseudo} inscrit(e) !`);
+  const btn = document.getElementById('reg-btn');
+  btn.innerHTML = '<span class="spinner"></span>Inscription…';
+  btn.disabled  = true;
+
+  try {
+    const res = await apiPost({ action:'addPlayer', pseudo });
+    showToast('ok', res.message || pseudo + ' inscrit !');
+    document.getElementById('r-pseudo').value = '';
+    await loadData();
+  } catch(e) {
+    showToast('err', e.message);
+  } finally {
+    btn.innerHTML = "Je m'inscris";
+    btn.disabled  = false;
+  }
 }
 
-function showToast(type,msg){const t=document.getElementById('reg-toast');t.className='toast '+type;t.style.display='block';t.textContent=msg;setTimeout(()=>{t.style.display='none';},3000);}
+function showToast(type, msg) {
+  const t = document.getElementById('reg-toast');
+  t.className = 'toast ' + type;
+  t.style.display = 'block';
+  t.textContent = msg;
+  setTimeout(() => { t.style.display = 'none'; }, 3500);
+}
 
-function go(id,btn){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
-  document.getElementById('page-'+id).classList.add('active');
+// ─────────────────────────────────────────
+//  ADMIN
+// ─────────────────────────────────────────
+async function doInitMatches() {
+  if (!confirm('Générer les matchs pour ' + (state.players||[]).length + ' joueurs inscrits ? Les scores seront remis à zéro.')) return;
+  const btn = document.getElementById('btn-init');
+  btn.innerHTML = '<span class="spinner"></span>Génération…';
+  btn.disabled  = true;
+  try {
+    const res = await apiPost({ action:'initMatches' });
+    showAdminMsg('msg-init', 'ok', res.message + ' (' + res.matchCount + ' matchs)');
+    await loadData();
+  } catch(e) {
+    showAdminMsg('msg-init', 'err', e.message);
+  } finally {
+    btn.innerHTML = 'Générer les matchs';
+    btn.disabled  = false;
+  }
+}
+
+async function doReset() {
+  if (!confirm('⚠️ RESET COMPLET — tous les joueurs, scores et matchs seront supprimés. Continuer ?')) return;
+  const btn = document.getElementById('btn-reset');
+  btn.innerHTML = '<span class="spinner"></span>Reset…';
+  btn.disabled  = true;
+  try {
+    const res = await apiPost({ action:'resetAll' });
+    showAdminMsg('msg-reset', 'ok', res.message);
+    await loadData();
+  } catch(e) {
+    showAdminMsg('msg-reset', 'err', e.message);
+  } finally {
+    btn.innerHTML = 'Tout remettre à zéro';
+    btn.disabled  = false;
+  }
+}
+
+function showAdminMsg(id, type, msg) {
+  const el = document.getElementById(id);
+  el.className = 'admin-msg ' + type;
+  el.style.display = 'block';
+  el.textContent = msg;
+}
+
+// ─────────────────────────────────────────
+//  NAV
+// ─────────────────────────────────────────
+function go(id, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
   btn.classList.add('active');
+  if (id === 'leaderboard') renderLbFull();
+  if (id === 'matches')     renderMatches();
+  if (id === 'register')    renderRegs();
 }
 
-window.addEventListener('DOMContentLoaded',()=>{
-  const{url,pw}=getConfig();
-  if(url) document.getElementById('cfg-url').value=url;
-  if(pw)  document.getElementById('cfg-pw').value=pw;
+// ─────────────────────────────────────────
+//  INIT
+// ─────────────────────────────────────────
+window.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('api-url-display').textContent = API_URL;
   loadData();
-  setInterval(loadData,30000);
+  setInterval(loadData, 30000);
 });
 </script>
 </body>
