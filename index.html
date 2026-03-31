@@ -609,8 +609,8 @@ function go(id, btn) {
   if (id === 'leaderboard') renderLbFull();
   if (id === 'matches')     renderMatches();
   if (id === 'register')    renderRegs();
-  // Verrouille l'admin si on quitte la page
-  if (id !== 'admin') lockAdmin();
+  // Verrouille uniquement si on quitte complètement la zone admin/matchs
+  if (id !== 'admin' && id !== 'matches') lockAdmin();
 }
 
 // ─────────────────────────────────────────
