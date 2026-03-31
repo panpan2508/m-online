@@ -12,7 +12,7 @@
   --border:#303030;--border2:#3a3a3a;
   --accent:#2563eb;--accentfade:rgba(37,99,235,.15);
   --muted:#555;--muted2:#999;
-  --cs2:#e8734a;--lol:#c89b3c;--fort:#5abfe8;--sc2r:#e84a4a;--brawl:#8e5ce7;
+  --cs2:#e8734a;--lol:#c89b3c;--fort:#5abfe8;--aoe4:#c8a84b;--brawl:#8e5ce7;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--bg);font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.5;color:#fff;}
@@ -70,7 +70,7 @@ h1 em{color:var(--accent);font-style:normal;display:block;}
 .gp-cs2{background:rgba(232,115,74,.12);color:var(--cs2);}
 .gp-lol{background:rgba(200,155,60,.12);color:var(--lol);}
 .gp-fortnite{background:rgba(90,191,232,.12);color:var(--fort);}
-.gp-sc2{background:rgba(232,74,74,.12);color:var(--sc2r);}
+.gp-aoe4{background:rgba(200,168,75,.12);color:var(--aoe4);}
 .gp-brawlhalla{background:rgba(142,92,231,.12);color:var(--brawl);}
 .lb-pts{font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--accent);min-width:36px;text-align:right;}
 
@@ -104,20 +104,20 @@ h1 em{color:var(--accent);font-style:normal;display:block;}
 .pnum{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-left:auto;}
 .toast{display:none;font-size:12px;margin-top:10px;padding:10px 14px;border-radius:9px;}
 .toast.ok{background:rgba(37,99,235,.12);color:var(--accent);border:1px solid rgba(37,99,235,.25);}
-.toast.err{background:rgba(232,74,74,.1);color:var(--sc2r);border:1px solid rgba(232,74,74,.2);}
+.toast.err{background:rgba(232,74,74,.1);color:#e84a4a;border:1px solid rgba(232,74,74,.2);}
 
 /* ADMIN */
 .admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;}
 .admin-card{background:var(--s1);border:1px solid var(--border);border-radius:12px;padding:20px 22px;}
 .admin-title{font-family:'Bebas Neue',sans-serif;font-size:22px;color:#fff;margin-bottom:4px;}
 .admin-sub{font-size:12px;color:var(--muted2);margin-bottom:16px;line-height:1.6;}
-.btn-danger{width:100%;background:rgba(232,74,74,.12) !important;color:var(--sc2r) !important;border:1px solid rgba(232,74,74,.25) !important;padding:11px !important;border-radius:9px !important;font-family:'DM Mono',monospace !important;font-size:11px !important;font-weight:500 !important;letter-spacing:.07em !important;text-transform:uppercase !important;cursor:pointer !important;transition:all .15s !important;}
+.btn-danger{width:100%;background:rgba(232,74,74,.12) !important;color:#e84a4a !important;border:1px solid rgba(232,74,74,.25) !important;padding:11px !important;border-radius:9px !important;font-family:'DM Mono',monospace !important;font-size:11px !important;font-weight:500 !important;letter-spacing:.07em !important;text-transform:uppercase !important;cursor:pointer !important;transition:all .15s !important;}
 .btn-danger:hover{background:rgba(232,74,74,.2) !important;}
 .btn-ok{width:100%;background:var(--accentfade) !important;color:var(--accent) !important;border:1px solid rgba(37,99,235,.25) !important;padding:11px !important;border-radius:9px !important;font-family:'DM Mono',monospace !important;font-size:11px !important;font-weight:500 !important;letter-spacing:.07em !important;text-transform:uppercase !important;cursor:pointer !important;transition:all .15s !important;}
 .btn-ok:hover{background:var(--accent) !important;color:#fff !important;}
 .admin-msg{font-size:12px;margin-top:10px;padding:9px 14px;border-radius:8px;display:none;}
 .admin-msg.ok{background:rgba(37,99,235,.12);color:var(--accent);border:1px solid rgba(37,99,235,.25);}
-.admin-msg.err{background:rgba(232,74,74,.1);color:var(--sc2r);border:1px solid rgba(232,74,74,.2);}
+.admin-msg.err{background:rgba(232,74,74,.1);color:#e84a4a;border:1px solid rgba(232,74,74,.2);}
 .cfg-input{width:100%;background:var(--s2);border:1px solid var(--border);color:#fff;padding:11px 14px;border-radius:9px;font-family:'DM Mono',monospace;font-size:12px;outline:none;transition:border-color .15s;margin-bottom:10px;}
 .cfg-input:focus{border-color:var(--accent);}
 .cfg-input::placeholder{color:#555;}
@@ -182,7 +182,7 @@ h1 em{color:var(--accent);font-style:normal;display:block;}
     <div class="hero">
       <div class="hero-tag"><span class="hero-tag-dot"></span>TOURNOI MULTIJEUX · 5 SOIRS</div>
       <h1>M-Online<em>Saison 1</em></h1>
-      <div class="hero-sub">Classement temps réel · 20 joueurs · CS2 · LoL · Fortnite · SC2 · Brawlhalla</div>
+      <div class="hero-sub">Classement temps réel · 20 joueurs · CS2 · LoL · Fortnite · AoE4 · Brawlhalla</div>
     </div>
     <div class="stats-row">
       <div class="stat-pill"><div class="sp-val" id="stat-players">—</div><div class="sp-lbl">Joueurs inscrits</div></div>
@@ -218,7 +218,7 @@ h1 em{color:var(--accent);font-style:normal;display:block;}
       <button class="fb" onclick="filt('cs2',this)">CS2</button>
       <button class="fb" onclick="filt('lol',this)">LoL</button>
       <button class="fb" onclick="filt('fortnite',this)">Fortnite</button>
-      <button class="fb" onclick="filt('sc2',this)">SC2</button>
+      <button class="fb" onclick="filt('aoe4',this)">AoE4</button>
       <button class="fb" onclick="filt('brawlhalla',this)">Brawlhalla</button>
       <button class="fb" onclick="filt('done',this)">Terminés</button>
       <button class="fb" onclick="filt('pending',this)">À jouer</button>
@@ -330,7 +330,7 @@ h1 em{color:var(--accent);font-style:normal;display:block;}
 // ─────────────────────────────────────────
 //  CONFIG — remplace l'URL ici
 // ─────────────────────────────────────────
-const API_URL = 'https://script.google.com/macros/s/AKfycbyGfrUtftmj8HWmqHBWUb9yO-Nf7c1L98dOBrHHe8maEmEXeYQwXUVNjvnjy4XpeNOjFA/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbyQJpaCCdLsbwD4Lz339YtTIn7LYnQlEuyniRuQOWK_S43Ac7O9MTxcShocU5gYd5Y6Ew/exec';
 const PW      = 'mecalux';
 let adminUnlocked = false;
 
@@ -338,10 +338,10 @@ const GAMES_META = {
   cs2:        { name:'CS2',        night:1, color:'cs2',        label:'FPS Tactique' },
   lol:        { name:'LoL',        night:2, color:'lol',        label:'MOBA' },
   fortnite:   { name:'Fortnite',   night:3, color:'fortnite',   label:'Battle Royale' },
-  sc2:        { name:'SC2',        night:4, color:'sc2',        label:'Stratégie' },
+  aoe4:       { name:'AoE4',      night:4, color:'aoe4',      label:'Stratégie' },
   brawlhalla: { name:'Brawlhalla', night:5, color:'brawlhalla', label:'Combat Final' }
 };
-const GNAMES = { cs2:'CS2', lol:'LoL', fortnite:'Fortnite', sc2:'SC2', brawlhalla:'Brawlhalla' };
+const GNAMES = { cs2:'CS2', lol:'LoL', fortnite:'Fortnite', aoe4:'AoE4', brawlhalla:'Brawlhalla' };
 
 let state = { players:[], matches:[] };
 let mf    = 'all';
@@ -373,7 +373,7 @@ async function loadData() {
     document.getElementById('lb-ts').textContent = 'Mis à jour à ' + new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
   } catch(e) {
     document.getElementById('lb-ts').textContent = 'Erreur de connexion';
-    document.getElementById('lb-home').innerHTML = '<div style="color:var(--sc2r);font-size:13px;padding:16px 0;">'+e.message+'</div>';
+    document.getElementById('lb-home').innerHTML = '<div style="color:#e84a4a;font-size:13px;padding:16px 0;">'+e.message+'</div>';
   }
 }
 
@@ -620,7 +620,7 @@ const SCORE_HINTS = {
   cs2:        'Ex : 13-7 (rounds)',
   lol:        'Ex : 1-0 (best of 1)',
   fortnite:   'Classement (position finale)',
-  sc2:        'Ex : 2-1 (maps)',
+  aoe4:       'Ex : 2-0 (parties)',
   brawlhalla: 'Ex : 3-1 (stocks)',
 };
 
