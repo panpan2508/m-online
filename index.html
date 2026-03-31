@@ -572,7 +572,6 @@ function checkAdminPw() {
     document.getElementById('admin-lock').style.display  = 'none';
     document.getElementById('admin-panel').style.display = 'block';
     input.value = '';
-    renderMatches(); // Réaffiche les matchs avec les boutons Saisir
   } else {
     toast.className = 'toast err';
     toast.style.display = 'block';
@@ -586,8 +585,6 @@ function lockAdmin() {
   adminUnlocked = false;
   document.getElementById('admin-lock').style.display  = 'block';
   document.getElementById('admin-panel').style.display = 'none';
-  renderMatches(); // Masque les boutons Saisir
-
 }
 
 
