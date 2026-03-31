@@ -591,6 +591,7 @@ function lockAdmin() {
 }
 
 
+function showAdminMsg(id, type, msg) {
   const el = document.getElementById(id);
   el.className = 'admin-msg ' + type;
   el.style.display = 'block';
